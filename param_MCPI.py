@@ -1,17 +1,21 @@
-# connection port
-PORT_MC  = 4711
+# Minecraft Pi Edition
+# Connection and blockID : MCPI
+# World parameters : MCPI
 
-# axis parameters
+# axis parameters for MCPI
 AXIS_WIDTH = 20    # x, z: -20 .. 0 .. 20
 AXIS_TOP = 40
 AXIS_Y_V_ORG = 20  # y of virtual origin
 AXIS_BOTTOM = 0    # y: 0 .. 20 .. 40
 
-# virtical levels
+# virtical levels for MCPI
 Y_TOP = 63         # the top where blocks can be set
 Y_SEA = -1         # the sea level
 
-# block IDs  ## see block.py
+# connection port for MCPI
+PORT_MC  = 4711
+
+# block IDs for MCPI  ## see block.py
 AIR = 0
 STONE = 1  
 GRASS_BLOCK = 2

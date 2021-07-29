@@ -1,5 +1,6 @@
-# connection port
-PORT_MC =  14712
+# Minecraft Java Edition 1.16.5
+# Connection and blockID : MCJE
+# World parameters : MCJE
 
 # axis parameters
 AXIS_WIDTH = 40       # x, z: -40 .. 0 .. 40
@@ -13,6 +14,9 @@ Y_CLOUD_BOTTOM = 128  # the bottom of clouds
 Y_SEA = 62            # the sea level
 Y_BOTTOM = 0          # the bottom where blocks can be set
 Y_BOTTOM_STEVE = -64  # the bottom where Steve can go down
+
+# connection port
+PORT_MC =  14712
 
 # block IDs  You can find IDs here: https://minecraft-ids.grahamedgecombe.com/
 AIR = "air"
