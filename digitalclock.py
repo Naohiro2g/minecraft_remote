@@ -9,20 +9,22 @@ import time
 from double_buffer_display import BufferDisplay
 
 # Minecraft Java Edition 1.13 or later
-from mcpi2.minecraft import Minecraft
-import param_MCJAVA as param
+from mcje.minecraft import Minecraft
+import param_MCJE as param
 
-# Mineraft Pi Edition
+# Mineraft Pi Edition, or Java Edition 1.12.2 or earlier
 # from mcpi.minecraft import Minecraft
 # import param_MCPI as param
 
-# mc = Minecraft.create(address='nao2g007', port=param.PORT_MC)
-mc = Minecraft.create(port=param.PORT_MC)
 
+# If you would like to contorl Minecraft running on the other computer:
+# mc = Minecraft.create(address='nao2g007', port=param.PORT_MC)
+# In the case of Minecraft is hosted on this, your computer:
+mc = Minecraft.create(port=param.PORT_MC)
 
 # display1 for year, month, and date in YYYY-MM-DD
 num_of_digits = len(datetime.datetime.now().strftime("%Y-%m-%d"))
-# left-bottom of the clock frame
+# top-left of the clock frame
 ap1 = (0, 63, -5)
 display1 = BufferDisplay(anchor_position=ap1)
 display1.clear(mc, num_of_digits=num_of_digits, block_frame=param.GOLD_BLOCK)

@@ -1,5 +1,7 @@
-import param_MCJAVA as param
+# Minecraft Java Edition 1.16.5
+import param_MCJE as param
 
+# Minecraft Pi Edition, or Java Edition 1.12.2
 # import param_MCPI as param
 
 from font_5x7 import font_design, FONT_WIDTH, FONT_HEIGHT
@@ -14,13 +16,14 @@ class BufferDisplay():
     """
     Double-buffer display for voxel letters in the Minecraft world.
     render: drawing on off-screen buffer
-    flip: copy off-screen to on-screen for changes only
+    flip: copy only changes from off-screen to on-screen
     """
 
     def __init__(self, anchor_position=(0,param.Y_SEA + 20,0)):
         """
-        Set everything up to render messages into the world
-        at the given anchor or starting position.
+        Set everything up to render messages on the display frame
+        with the given anchor or starting position.
+        anchor is at the topleft of the display frame.
         """
         self.last_message = ''
         self.offscreen = []
@@ -70,8 +73,7 @@ class BufferDisplay():
     def flip(self, mc):
         """
         Put the off-screen buffer onto the screen.
-        off-screen --> on-screen and Minecraft world
-        Send only changes
+        Send only changes from off-screen --> on-screen and Minecraft world
         Copy off-screen to on-screen for the next flip
         """
         line_offset = 0
@@ -80,7 +82,7 @@ class BufferDisplay():
             for dot in line:  # check off-screen dot by dot
                 # if on-screen is changed from off-screen
                 #     on-screen <- dot
-                #     place a block
+                #     place the dot in MC world by setBlock
                 if self.onscreen[line_offset][dot_offset] != dot:
                     self.onscreen[line_offset][dot_offset] = dot
                     mc.setBlock(self.anchor_position[0] + 2 + dot_offset,
