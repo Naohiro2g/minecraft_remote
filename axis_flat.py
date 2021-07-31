@@ -10,14 +10,20 @@ Flatten the world
 
 mc: an instance of Minecraft must be created beforehand
 """
-# Select mcpi or mcje to import here.
-# mcpi: Minecraft Pi Edition or Java Edition 1.12.2
-# mcje: Minecraft Java Edition 1.16.5
+# Select modules to import here.
+# Minecraft Java Edition 1.16.5 : mcje, param_MCJE
+# Minecraft Java Edition 1.12.2 : mcpi, param_MCJE1122
+# Minecraft Pi Edition : mcpi, param_MCPI
 
 from mcje.minecraft import Minecraft
 import param_MCJE as param
+
+# from mcpi.minecraft import Minecraft
+# import param_MCJE1122 as param
+
 # from mcpi.minecraft import Minecraft
 # import param_MCPI as param
+
 
 from time import sleep
 
@@ -79,8 +85,8 @@ def clear_XYZ_axis(mc, wait=0.5):
     sleep(wait)
 
 def reset_minecraft_world(mc, width=80):
-    mc.setBlocks(-width, param.AXIS_BOTTOM + 1, -width,   width, param.AXIS_TOP,    width,    param.AIR)
-    mc.setBlocks(-width, param.AXIS_BOTTOM,     -width,   width, param.AXIS_BOTTOM, width,    param.GRASS_BLOCK)
+    mc.setBlocks(-width, param.Y_SEA + 1, -width,   width, param.AXIS_TOP,    width,    param.AIR)
+    mc.setBlocks(-width, param.Y_SEA,     -width,   width, param.Y_SEA,       width,    param.GRASS_BLOCK)
 
 
 if __name__ == "__main__":

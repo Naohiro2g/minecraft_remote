@@ -2,6 +2,8 @@
 # Connection and blockID : MCPI
 # World parameters : MCPI
 
+print("param_MCPI loaded")
+
 # axis parameters for MCPI
 AXIS_WIDTH = 20    # x, z: -20 .. 0 .. 20
 AXIS_TOP = 40

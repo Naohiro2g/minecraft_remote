@@ -2,11 +2,13 @@
 # Connection and blockID : MCJE
 # World parameters : MCJE
 
+print("param_MCJE loaded")
+
 # axis parameters
 AXIS_WIDTH = 40       # x, z: -40 .. 0 .. 40
 AXIS_TOP = 127
-AXIS_Y_V_ORG = 80     # y of virtual origin
-AXIS_BOTTOM = 40      # y: 40 .. 80 .. 127
+AXIS_Y_V_ORG = 96     # y of virtual origin
+AXIS_BOTTOM = 63      # y: 63 .. 96 .. 127
 
 # virtical levels
 Y_TOP = 255           # the top where blocks can be set
