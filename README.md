@@ -1,6 +1,12 @@
 # Naohiro2g/minecraft_remote
-[<img src="./update_aquatic_1.16.5.png" width="320">](./update_aquatic_1.16.5.png)
-You cancontrol version [1.16.5](https://www.youtube.com/watch?v=hcutClmY1pI) in Scratch 3 or Python.
+
+|[1.13 Update Aquatic](https://www.youtube.com/watch?v=hcutClmY1pI)|[1.16 Nether update](https://www.youtube.com/watch?v=1DhWXAiNgfQ)|
+|--|--|
+|[<img src="./1.13_update_aquatic.jpg" width="240">](./1.13_update_aquatic.jpg)|[<img src="./1.16_nether_update.png" width="240">](./1.16_nether_update.png)|
+
+You can control over Minecraft Java Edition Version 1.16.5 in Scratch 3 or Python.
+
+
 ## Remote control over Minecraft in Python / Scratch
 [**(Japanese here.  (not yet))**](README_ja.md)
 
