@@ -1,8 +1,8 @@
 # Naohiro2g/minecraft_remote
 
-|[1.13 Update Aquatic](https://www.youtube.com/watch?v=hcutClmY1pI)|[1.16 Nether update](https://www.youtube.com/watch?v=1DhWXAiNgfQ)|
-|--|--|
-|[<img src="./1.13_update_aquatic.jpg" width="240">](./1.13_update_aquatic.jpg)|[<img src="./1.16_nether_update.png" width="240">](./1.16_nether_update.png)|
+|[1.12 World of Color Update](https://www.youtube.com/watch?v=k2dQuIIUT-o)|[1.13 Update Aquatic](https://www.youtube.com/watch?v=hcutClmY1pI)|[1.16 Nether update](https://www.youtube.com/watch?v=1DhWXAiNgfQ)|
+|--|--|--|
+|[<img src="./1.12_world_of_color_update.jpg" width="240">](./1.12_world_of_color_update.jpg)|[<img src="./1.13_update_aquatic.jpg" width="240">](./1.13_update_aquatic.jpg)|[<img src="./1.16_nether_update.png" width="240">](./1.16_nether_update.png)|
 
 You can control over Minecraft Java Edition Version 1.16.5 in Scratch 3 or Python.
 
@@ -38,7 +38,7 @@ But, once again, the changes at version 1.17 was pretty large. For the compatibi
 Sorry, examples are only in Python, not for Scratch, so far. See [takecy's](https://github.com/takecx/RemoteControllerMod) to start in Scratch.
  - [hello_MCPI.py](./hello_MCPI.py), [hello_MCJE.py](./hello_MCJE.py), [hello_MCJE1122.py](./hello_MCJE1122.py) : Typical Hello World code. **Try this first to learn how to select Python module mcpi or mcje for your environment.** Install mcpi from Pypi with this. ``` pip3 install mcpi --user ``` or ``` pip install mcpi --user ```
 
- - digitalclock.py to display a realtim clock with time and date using 5 x 7, LCD font in the format as follows (also shown in the picture above):
+ - digitalclock.py to display a realtime clock with time and date using 5 x 7, LCD font in the format as follows (also shown in the picture above):
 ```
         2021-06-26
          21:28:45
