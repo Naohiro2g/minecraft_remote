@@ -4,8 +4,7 @@
 |--|--|--|
 |[<img src="./1.12_world_of_color_update.jpg" width="240">](./1.12_world_of_color_update.jpg)|[<img src="./1.13_update_aquatic.jpg" width="240">](./1.13_update_aquatic.jpg)|[<img src="./1.16_nether_update.png" width="240">](./1.16_nether_update.png)|
 
-You can control over Minecraft Java Edition Version 1.16.5 in Scratch 3 or Python.
-
+We had been stucked in the world of color for three years.  The wait is over. You can control over Minecraft Java Edition Version 1.16.5 in Scratch 3 or Python.
 
 ## Remote control over Minecraft in Python / Scratch
 [**(Japanese here.  (not yet))**](README_ja.md)
