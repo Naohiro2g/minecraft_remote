@@ -74,7 +74,7 @@ You might think learning axes or axis are too difficult and too early for age 8,
  - Named as mcje, and updated for use of Minecraft Java Edition 1.13 or later.
  - It might be available in Pypi later.
 
-## Preparation for Python, Java and other enviro
+## Preparation for Python, Java and other environment
 
 (in the pipeline...)
  - Python 3.7.9
