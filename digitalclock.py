@@ -47,6 +47,6 @@ display1.update(msg, block_letters=param.IRON_BLOCK)
 
 while True:
     msg = time.strftime("%H:%M:%S")
-    display2.update(msg, block_letters=param.SEA_LANTERN_BLOCK)
-    # display2.update(msg, block_letters=param.GLOWSTONE)
+    # display2.update(msg, block_letters=param.SEA_LANTERN_BLOCK)
+    display2.update(msg, block_letters=param.GLOWSTONE)
     time.sleep(0.1)  # Rest for a while before drawing again.

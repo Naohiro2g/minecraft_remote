@@ -31,8 +31,8 @@ AP1 = (-19, 63, -5)  # top-left of the display frame
 from double_buffer_display import BufferDisplay
 import time
 
-# mc = Minecraft.create(address='nao2g005.local', port=param.PORT_MC)
-mc = Minecraft.create(port=param.PORT_MC)  # MCJE:14712, MCPI:4711
+mc = Minecraft.create(address='nao2g005.local', port=param.PORT_MC)
+# mc = Minecraft.create(port=param.PORT_MC)  # MCJE:14712, MCPI:4711
 mc.postToChat("demo2")
 
 num_of_letters = 7
