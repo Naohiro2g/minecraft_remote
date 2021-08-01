@@ -10,16 +10,16 @@ The intersection is not the real origin, but a virtual one.
 # Minecraft Pi Edition : mcpi, param_MCPI
 
 # for Minecraft Java Edition 1.16.5
-from mcje.minecraft import Minecraft
-import param_MCJE as param
+# from mcje.minecraft import Minecraft
+# import param_MCJE as param
 
 # for Mineraft Java Edition 1.12.2
 # from mcje.minecraft import Minecraft
 # import param_MCJE1122 as param
 
 # for Mineraft Pi Edition
-# from mcpi.minecraft import Minecraft
-# import param_MCPI as param
+from mcpi.minecraft import Minecraft
+import param_MCPI as param
 
 import axis_flat
 

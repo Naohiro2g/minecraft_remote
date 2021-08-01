@@ -13,9 +13,9 @@ You can use numbers, "-", ":", and " ". Or, make your own letters.
 # Minecraft Pi Edition : mcpi, param_MCPI
 
 # for Minecraft Java Edition 1.16.5
-from mcje.minecraft import Minecraft
-import param_MCJE as param
-AP1 = (-19, 100, -5)  # top-left of the display frame
+# from mcje.minecraft import Minecraft
+# import param_MCJE as param
+# AP1 = (-19, 100, -5)  # top-left of the display frame
 
 # for Mineraft Java Edition 1.12.2
 # from mcje.minecraft import Minecraft
@@ -23,9 +23,9 @@ AP1 = (-19, 100, -5)  # top-left of the display frame
 # AP1 = (-19, 100, -5)  # top-left of the display frame
 
 # for Mineraft Pi Edition
-# from mcpi.minecraft import Minecraft
-# import param_MCPI as param
-# AP1 = (-19, 63, -5)  # top-left of the display frame
+from mcpi.minecraft import Minecraft
+import param_MCPI as param
+AP1 = (-19, 63, -5)  # top-left of the display frame
 
 
 from double_buffer_display import BufferDisplay

@@ -15,14 +15,14 @@ mc: an instance of Minecraft must be created beforehand
 # Minecraft Java Edition 1.12.2 : mcpi, param_MCJE1122
 # Minecraft Pi Edition : mcpi, param_MCPI
 
-from mcje.minecraft import Minecraft
-import param_MCJE as param
+# from mcje.minecraft import Minecraft
+# import param_MCJE as param
 
 # from mcpi.minecraft import Minecraft
 # import param_MCJE1122 as param
 
-# from mcpi.minecraft import Minecraft
-# import param_MCPI as param
+from mcpi.minecraft import Minecraft
+import param_MCPI as param
 
 
 from time import sleep

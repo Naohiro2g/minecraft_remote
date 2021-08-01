@@ -3,13 +3,13 @@ Class BufferDisplay
 """
 
 # Minecraft Java Edition 1.16.5
-import param_MCJE as param
+# import param_MCJE as param
 
 # Minecraft Java Edition 1.12.2
 # import param_MCJE1122 as param
 
 # Minecraft Pi Edition
-# import param_MCPI as param
+import param_MCPI as param
 
 from font_5x7 import font_design, FONT_WIDTH, FONT_HEIGHT
 
