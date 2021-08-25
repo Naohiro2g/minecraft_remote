@@ -25,7 +25,8 @@ I believe the same is true for learning a foreign language. **Don't learn the la
 |Java Edition (MCJE) 1.16.5|[Forge 1.16.5](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.16.5.html)|[RemoteControllerMod-1.16.5 v0.05](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3363255)|[mcje](./mcje)|[Scratch 3 + MC Ext 1.16.5](https://takecx.github.io/scratch-gui/1-16-5/)|
 
 ***Optifine mod might fine tune on the visual effects of Minecraft Java Edition to make it snappier.
-You need to select the same version as Minecraft. https://optifine.net/downloads***
+You need to select the same version as Minecraft. https://optifine.net/downloads
+You might need Java SE 8 JRE to run Forge. https://www.java.com/download/ie_manual.jsp***
 
 You can run Minecraft Java Edition on Linux including Raspberry Pi, Mac and PC. Unfortunately, at least so far, new comer who cannnot have Mojang account are unable to launch the app on Raspberry Pi.
 
