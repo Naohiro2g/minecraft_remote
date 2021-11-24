@@ -15,16 +15,16 @@ Y_TOP = 63         # the top where blocks can be set
 Y_SEA = -1         # the sea level
 
 # connection port for MCPI
-PORT_MC  = 4711
+PORT_MC = 4711
 
 # block IDs for MCPI  ## see block.py
 AIR = 0
-STONE = 1  
+STONE = 1
 GRASS_BLOCK = 2
 GOLD_BLOCK = 41
 IRON_BLOCK = 42
 GLOWSTONE = 89
-# SEA_LANTERN_BLOCK = 169  # not available in MCPI
+SEA_LANTERN_BLOCK = GLOWSTONE  # not available in MCPI
 
 # some good blocks for grid like patterns you can count blocks easily
 GLASS = 20

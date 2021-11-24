@@ -18,11 +18,11 @@ Y_BOTTOM = 0          # the bottom where blocks can be set
 Y_BOTTOM_STEVE = -64  # the bottom where Steve can go down
 
 # connection port for MCPI
-PORT_MC  = 4711
+PORT_MC = 4711
 
 # block IDs for MCPI  ## see block.py
 AIR = 0
-STONE = 1  
+STONE = 1
 GRASS_BLOCK = 2
 GOLD_BLOCK = 41
 IRON_BLOCK = 42

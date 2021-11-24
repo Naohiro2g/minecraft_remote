@@ -18,7 +18,7 @@ Y_BOTTOM = 0          # the bottom where blocks can be set
 Y_BOTTOM_STEVE = -64  # the bottom where Steve can go down
 
 # connection port
-PORT_MC =  14712
+PORT_MC = 14712
 
 # block IDs  You can find IDs here: https://minecraft-ids.grahamedgecombe.com/
 AIR = "air"
