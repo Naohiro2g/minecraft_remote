@@ -11,31 +11,38 @@ from mcpi import minecraft, block
 
 N = 5
 M = 5
-H = 2
-
+H = 3
+SEA_LEVEL = 62
+SEA_LANTERN = 169
 
 def put_maze_block(mc, mark, x_pos, z_pos):
     if mark == '#':
         mc.setBlocks(
-            x_pos, 0, z_pos,
-            x_pos, H, z_pos,
-            169  # SEA_LANTERN block not avaiable in mcpi
+            x_pos, SEA_LEVEL + 1, z_pos,
+            x_pos, SEA_LEVEL + 1 + H, z_pos,
+            SEA_LANTERN  # SEA_LANTERN block not available in mcpi
         )
 
 
 def main():
     mc = minecraft.Minecraft.create()
-    mc.player.setPos(0, 1, 0)
+    mc.player.setPos(0, 80, 0)
 
     mc.setBlocks(
-        -3, 0, -3,
-        50, 50, 50,
+        -40, SEA_LEVEL + 1, -40,
+        40, 127, 40,
         block.AIR
     )
 
     mc.setBlocks(
-        -3, 0, -3,
-        50, 0, 50,
+        -40, SEA_LEVEL - 1, -40,
+        40, SEA_LEVEL - 1, 40,
+        block.STONE
+    )
+
+    mc.setBlocks(
+        -40, SEA_LEVEL, -40,
+        40, SEA_LEVEL, 40,
         block.GRASS
     )
 
