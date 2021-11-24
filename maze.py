@@ -6,6 +6,7 @@
 # YouTube:【Pythonでマイクラ操作！】自動で迷路を作成してマインクラフト上で遊んでみよう
 #       〜 Minecraftプログラミング入門 〜    https://www.youtube.com/watch?v=iK3V8q2EiI8
 
+from time import sleep
 from mazelib import Maze
 from mazelib.generate.Prims import Prims
 # from mcpi import minecraft, block
@@ -38,7 +39,7 @@ def put_maze_block(mc, mark, x_pos, z_pos):
         )
 
 
-def main():
+def main(wait=0.1):
     mc = Minecraft.create()
     mc.player.setPos(12, 80, 12)
 
@@ -73,8 +74,9 @@ def main():
         for x, mark in enumerate(mark_list):
             put_maze_block(mc, mark, x, z)
             print(mark + mark, flush=False, end=' ')
+            sleep(wait)
         print()
 
 
 if __name__ == '__main__':
-    main()
+    main(wait=0.05)
