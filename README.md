@@ -60,6 +60,7 @@ Using hand-made LCD font on double-buffer display, you can learn 'class'.  I pre
 You might think learning axes or axis are too difficult and too early for age 8, but it's not true. If you are thinking to *teach* them, it's true. Just try to assist kids learning. Umm, I'm just playing with them, actually.
 
 Maze by letters and blocks in the Minecraft world.
+
 [<img src="./images/maze_letters.png" width="240">](./images/maze_letters.png) [<img src="./images/maze_blocks.png" width="240">](./images/maze_blocks.png)
 
 ## Files used in the digital clock
