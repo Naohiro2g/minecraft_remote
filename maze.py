@@ -1,9 +1,10 @@
 # Maze builder in Minecraft world
 #
-# Original code written by PythonVTuberサプー or PythonVTuber Supu
+# Original code written by PythonVTuberサプー or supu
+# https://colab.research.google.com/drive/1asGAz0ggpt4d-cVYPhyWkk_lTqTRNF-A
+# Copyright (c) 2021 supu  Released under the MIT license
 # YouTube:【Pythonでマイクラ操作！】自動で迷路を作成してマインクラフト上で遊んでみよう
 #       〜 Minecraftプログラミング入門 〜    https://www.youtube.com/watch?v=iK3V8q2EiI8
-# Original code: https://colab.research.google.com/drive/1asGAz0ggpt4d-cVYPhyWkk_lTqTRNF-A
 
 from mazelib import Maze
 from mazelib.generate.Prims import Prims
@@ -24,7 +25,7 @@ import param_MCJE1122 as param
 # import param_MCPI as param
 
 N = 5
-M = 5
+M = 8
 H = 3
 
 
@@ -39,7 +40,7 @@ def put_maze_block(mc, mark, x_pos, z_pos):
 
 def main():
     mc = Minecraft.create()
-    mc.player.setPos(0, 80, 0)
+    mc.player.setPos(12, 80, 12)
 
     mc.setBlocks(
         -40, param.Y_SEA + 1, -40,
