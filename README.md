@@ -2,7 +2,7 @@
 
 |[1.12 World of Color Update](https://www.youtube.com/watch?v=k2dQuIIUT-o)|[1.13 Update Aquatic](https://www.youtube.com/watch?v=hcutClmY1pI)|[1.16 Nether update](https://www.youtube.com/watch?v=1DhWXAiNgfQ)|
 |--|--|--|
-|[<img src="./1.12_world_of_color_update.jpg" width="240">](./1.12_world_of_color_update.jpg)|[<img src="./1.13_update_aquatic.jpg" width="240">](./1.13_update_aquatic.jpg)|[<img src="./1.16_nether_update.png" width="240">](./1.16_nether_update.png)|
+|[<img src="./images/1.12_world_of_color_update.jpg" width="240">](./images/1.12_world_of_color_update.jpg)|[<img src="./images/1.13_update_aquatic.jpg" width="240">](./images/1.13_update_aquatic.jpg)|[<img src="./images/1.16_nether_update.png" width="240">](./images/1.16_nether_update.png)|
 
 We had been stucked in the world of color for four years.  The wait is over. You can control over Minecraft Java Edition Version 1.16.5 in Scratch 3 or Python.
 
@@ -53,8 +53,14 @@ Using hand-made LCD font on double-buffer display, you can learn 'class'.  I pre
     - y-axis: Grass on soil blocks
     - z-axis: Gold blocks
  - demo1.py, demo2.py : Usage of axis_flat or double_buffer_display modules.
+ - **(NEW)** maze.py : Building a maze in the Minecraft world by supu who is Python VTuber. Watch her movie on YouTube: https://www.youtube.com/watch?v=iK3V8q2EiI8
+**"Remote Minecraft by Python"** Let's create a maze automatically and play with it on Minecraft." In Japanese without English CC, sorry.
 
-You might think learning axes or axis are too difficult and too early for age 8, but it's not true. If you are thinking to teach them, it's true. Just try to assist kids learning. Umm, I'm just playing with them, actually.
+
+You might think learning axes or axis are too difficult and too early for age 8, but it's not true. If you are thinking to *teach* them, it's true. Just try to assist kids learning. Umm, I'm just playing with them, actually.
+
+Maze by letters and blocks in the Minecraft world.
+[<img src="./images/maze_letters.png" width="240">](./images/maze_letters.png) [<img src="./images/maze_blocks.png" width="240">](./images/maze_blocks.png)
 
 ## Files used in the digital clock
 #### [digitalclock.py](./digitalclock.py)
