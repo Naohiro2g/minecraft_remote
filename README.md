@@ -7,7 +7,7 @@
 We had been stucked in the world of color for four years.  The wait is over. You can control over Minecraft Java Edition Version 1.16.5 in Scratch 3 or Python.
 
 ## Remote control over Minecraft in Python / Scratch
-[**(Japanese here.  (not yet))**](README_ja.md)
+[**(==== Japanese here. ====)**](./README_ja.md)
 
 By using the Minecraft API and coding in Scratch or Python, you can place blocks and move Steve around, and more.
 
@@ -35,7 +35,7 @@ The changes of Minecraft Java Edition at 1.13 "Update Aquatic" were so significa
 But, once again, the changes at version 1.17 was pretty large. For the compatibility with the latest version of Minecraft-Forge 1.17, please wait for a while to cope with it. Or, rather concider to join force with us for the development of [RemoteControllerMod](https://github.com/takecx/RemoteControllerMod) on GitHub.com to reduce the wait.
 
 (The black horse is thinking... to help us?)
-[<img src="./minecraft_remote_digitalclock.png" width="400">](./minecraft_remote_digitalclock.png)
+[<img src="./images/minecraft_remote_digitalclock.png" width="400">](./images/minecraft_remote_digitalclock.png)
 
 ## Examples to draw something in the Minecraft world by voxels or volume pixels
 Sorry, examples are only in Python, not for Scratch, so far. See [takecy's](https://github.com/takecx/RemoteControllerMod) to start in Scratch.
