@@ -7,7 +7,7 @@
 We had been stucked in the world of color for four years.  The wait is over. You can control over Minecraft Java Edition Version 1.16.5 in Scratch 3 or Python.
 
 ## Remote control over Minecraft in Python / Scratch
-[**(==== Japanese here. ====)**](./README_ja.md)
+[**(==== 日本語はこちら。 ====)**](./README_ja.md)
 
 By using the Minecraft API and coding in Scratch or Python, you can place blocks and move Steve around, and more.
 
