@@ -34,13 +34,13 @@ num_of_letters = len(datetime.datetime.now().strftime("%Y-%m-%d"))
 # top-left of the clock frame
 ap1 = (0, param.AXIS_Y_V_ORG + 24, 5)
 display1 = BufferDisplay(mc, anchor_position=ap1,
-                block_frame=param.GOLD_BLOCK, num_of_letters=num_of_letters)
+                         block_frame=param.GOLD_BLOCK, num_of_letters=num_of_letters)
 
 # display2 for hour, minute, second in HH:MM:SS
 num_of_letters = len(time.strftime("%H:%M:%S"))
 ap2 = (6, param.AXIS_Y_V_ORG + 12, 5)
 display2 = BufferDisplay(mc, anchor_position=ap2,
-                block_frame=param.IRON_BLOCK, num_of_letters=num_of_letters)
+                         block_frame=param.IRON_BLOCK, num_of_letters=num_of_letters)
 
 msg = datetime.datetime.now().strftime("%Y-%m-%d")
 display1.update(msg, block_letters=param.IRON_BLOCK)

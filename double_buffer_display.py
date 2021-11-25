@@ -19,6 +19,7 @@ DISP_HEIGHT = FONT_HEIGHT + 4
 BLOCK_FRAME = param.GOLD_BLOCK
 LETTER_SPACING = 1
 
+
 class BufferDisplay():
     """
     Double-buffer display for voxel letters in the Minecraft world.
@@ -29,10 +30,10 @@ class BufferDisplay():
     """
 
     def __init__(self,
-                mc,
-                anchor_position=(0,param.Y_SEA + 20,0),
-                block_frame=param.GOLD_BLOCK,
-                num_of_letters=12):
+                 mc,
+                 anchor_position=(0, param.Y_SEA + 20, 0),
+                 block_frame=param.GOLD_BLOCK,
+                 num_of_letters=12):
         """
         Set everything up to render messages on the display frame
         with the given anchor or starting position.

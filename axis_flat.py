@@ -76,6 +76,7 @@ def draw_XYZ_axis(mc, wait=0.1):
             z += 1
             sleep(wait)
 
+
 def clear_XYZ_axis(mc, wait=0.5):
     mc.setBlocks(-param.AXIS_WIDTH, param.AXIS_Y_V_ORG, 0,   param.AXIS_WIDTH, param.AXIS_Y_V_ORG, 0,   param.AIR)  # x
     sleep(wait)
@@ -83,6 +84,7 @@ def clear_XYZ_axis(mc, wait=0.5):
     sleep(wait)
     mc.setBlocks(0, param.AXIS_Y_V_ORG, -param.AXIS_WIDTH,   0, param.AXIS_Y_V_ORG, param.AXIS_WIDTH,   param.AIR)  # z
     sleep(wait)
+
 
 def reset_minecraft_world(mc, width=80):
     mc.setBlocks(-width, param.Y_SEA + 1, -width,   width, param.AXIS_TOP,    width,    param.AIR)
