@@ -73,7 +73,7 @@ mcpiモジュールをPypiからインストールするには、
    - Mac, Linux：
        - ```sudo pip3 install mazelib ```などでインストール／ビルドできるはず。
    - Windows 10／11：
-      - Visual Studio Communityとビルドツールがインストールされていれば、```pip install mazelib```でオッケー。少なくともWindows 10/11 SDKとMSVC v142/v143 C++ x64/x86ビルドツールが必要。https://visualstudio.microsoft.com/ja/visual-cpp-build-tools/ 色々あって訳わからんけど、ふたつだけ入れる。
+      - C++ビルドツールがインストールされていれば、```pip install mazelib```でオッケー。詳しくは後述。
 
 [<img src="./images/maze_letters.png" width="220">](./images/maze_letters.png) [<img src="./images/maze_blocks.png" width="220">](./images/maze_blocks.png)
 
@@ -82,6 +82,16 @@ mcpiモジュールをPypiからインストールするには、
 
 **8歳の子どもがx軸y軸を学ぶのは難しすぎる、あるいは早すぎる、と思うかもしれませんが、そんなことはありません。彼らに「教えよう」としているのなら、確かにそうでしょう。子どもたちが学ぶのを助けるだけにしてみてください。あー、実際のところ、私は彼らと一緒に遊んでいるだけです。**
 
+
+### Widows C++ビルドツールのインストール (mazelib用)
+https://visualstudio.microsoft.com/ja/downloads/
+ここで「Visual Studio 2022用のツール」を開き、Build Tools for Visual Studio 2022をゲット。スタンドアロンで動くのでVisual Studio自体は不要。pipからの利用ならVisual Studio Build Toolsアプリを開くこともない。
+
+実態はVisual Studio　Installerで、これを起動。「個別のコンポーネント」で
+Windows 10 SDKとMSVC v142 C++ x64/x86ビルドツール
+あるいは
+Windows 11 SDKとMSVC v143 C++ x64/x86ビルドツール
+を探し出してインストール。前者はwindowsで検索。後者はmsvcで検索。
 
 ## デジタルクロックで使われているファイルたち
 
