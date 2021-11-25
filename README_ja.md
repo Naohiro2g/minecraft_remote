@@ -73,7 +73,7 @@ mcpiモジュールをPypiからインストールするには、
    - Mac, Linux：
        - ```sudo pip3 install mazelib ```などでインストール／ビルドできるはず。
    - Windows 10／11：
-      - Visual Studio Communityとビルドツールがインストールされていれば、```pip install mazelib```でオッケー。少なくともWindows 10/11 SDKとMSVC v142/v143 C++ x64/x86ビルドツールが必要。https://visualstudio.microsoft.com/ja/visual-cpp-build-tools/　色々あって訳わからんけど、ふたつだけ入れる。
+      - Visual Studio Communityとビルドツールがインストールされていれば、```pip install mazelib```でオッケー。少なくともWindows 10/11 SDKとMSVC v142/v143 C++ x64/x86ビルドツールが必要。https://visualstudio.microsoft.com/ja/visual-cpp-build-tools/ 色々あって訳わからんけど、ふたつだけ入れる。
 
 [<img src="./images/maze_letters.png" width="220">](./images/maze_letters.png) [<img src="./images/maze_blocks.png" width="220">](./images/maze_blocks.png)
 
