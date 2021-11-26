@@ -1,4 +1,5 @@
 # Naohiro2g/minecraft_remote
+[**(==== 日本語はこちら。 ====)**](./README_ja.md)
 
 |[1.12 World of Color Update](https://www.youtube.com/watch?v=k2dQuIIUT-o)|[1.13 Update Aquatic](https://www.youtube.com/watch?v=hcutClmY1pI)|[1.16 Nether update](https://www.youtube.com/watch?v=1DhWXAiNgfQ)|
 |--|--|--|
@@ -7,7 +8,6 @@
 We had been stucked in the world of color for four years.  The wait is over. You can control over Minecraft Java Edition Version 1.16.5 in Scratch 3 or Python.
 
 ## Remote control over Minecraft in Python / Scratch
-[**(==== 日本語はこちら。 ====)**](./README_ja.md)
 
 By using the Minecraft API and coding in Scratch or Python, you can place blocks and move Steve around, and more.
 
@@ -18,17 +18,19 @@ In my class, we even include the use of git and GitHub.com, which is a fun self-
 I believe the same is true for learning a foreign language. **Don't learn the language, use the language.** (I've just created the 'quote' now. ;) )
 
 ## Editions / versions and environments
+There are three different environments depending on the combination of Minecraft editions and versions.
+
+Regarding Python modules, the Java version 1.12.2 uses the traditional mcpi as in the Raspi version, while the Java version 1.16.5 uses the new mcje.  The Java version 1.16.5 uses the new mcje. The RasPi version does not require any mods, while each of the two Java versions requires the same version of mods as Minecradt, and a Forge to house the mods.
 |Minecraft|Forge|mod|Python module|Scratch + Extension|
 |---|---|---|---|---|
 |Pi Edition (MCPI) Raspbery Pi|-|-|[mcpi](https://github.com/martinohanlon/mcpi)|Scratch 1.4 + [Scratch2MCPI](https://github.com/scratch2mcpi/scratch2mcpi)|
 |Java Edition (MCJE) 1.12.2|[Forge 1.12.2](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.12.2.html)|[RemoteControllerMod-1.12.2 v0.02](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3242375)|[mcpi](https://github.com/martinohanlon/mcpi)|[Scratch 3 + MC Ext 1.12.2](https://takecx.github.io/scratch-gui/1-12-2/)|
 |Java Edition (MCJE) 1.16.5|[Forge 1.16.5](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.16.5.html)|[RemoteControllerMod-1.16.5 v0.05](https://www.curseforge.com/minecraft/mc-mods/remote-controller/files/3363255)|[mcje](./mcje)|[Scratch 3 + MC Ext 1.16.5](https://takecx.github.io/scratch-gui/1-16-5/)|
 
-***Optifine mod might fine tune on the visual effects of Minecraft Java Edition to make it snappier.
-You need to select the same version as Minecraft. https://optifine.net/downloads
+***Optifine mod might fine tune on the visual effects of Minecraft Java Edition to make it snappier.You need to select the same version as Minecraft. https://optifine.net/downloads
 You might need Java SE 8 JRE to run Forge. https://www.java.com/download/ie_manual.jsp***
 
-You can run Minecraft Java Edition on Linux including Raspberry Pi, Mac and PC. Unfortunately, at least so far, new comer who cannnot have Mojang account are unable to launch the app on Raspberry Pi.
+You can run Minecraft Java Edition on Linux including Raspberry Pi, Mac and PC. Unfortunately, at least so far, new comer who cannnot have Mojang account are very difficult to launch the Java Edition app on Raspberry Pi. (Minecraft account system is in the middle of migrating from Mojang account to Microsoft one. Arm platform is not on the support list of Microsoft.)
 
 The changes of Minecraft Java Edition at 1.13 "Update Aquatic" were so significant that we were forced to stay with 1.12.2 for three long years in remote control over Minecraft. We broke thruough it by the huge effort of [takecx](https://github.com/takecx), then made it possible to work with version 1.16.5.
 
@@ -53,15 +55,31 @@ Using hand-made LCD font on double-buffer display, you can learn 'class'.  I pre
     - y-axis: Grass on soil blocks
     - z-axis: Gold blocks
  - demo1.py, demo2.py : Usage of axis_flat or double_buffer_display modules.
- - **(NEW)** maze.py : Building a maze in the Minecraft world by supu who is Python VTuber. Watch her movie on YouTube: https://www.youtube.com/watch?v=iK3V8q2EiI8
-**"Remote Minecraft by Python"** Let's create a maze automatically and play with it on Minecraft." In Japanese without English CC, sorry.
+ - **(NEW)** maze.py : Building a maze in the Minecraft world by supu, Python VTuber. Watch her movie on YouTube : https://www.youtube.com/watch?v=iK3V8q2EiI8
+**"Remote Minecraft by Python"** — Let's create a maze automatically and play with it on Minecraft. — In Japanese without English CC, sorry.
+   - Using a Python module named mazelib. It contains C++ code and there is no binary on Pypi, it needs to be built during installation with pip.
+   - Mac, Linux：
+       - You should be successfully install it with ```sudo pip3 install mazelib ```
+   - Windows 10／11：
+      - If you have C++ build tools, this will help you: ```pip install mazelib``` Or read the details below.
 
-
-You might think learning axes or axis are too difficult and too early for age 8, but it's not true. If you are thinking to *teach* them, it's true. Just try to assist kids learning. Umm, I'm just playing with them, actually.
+**You might think learning axes or axis are too difficult and too early for age 8, but it's not true. If you are thinking to *teach* them, it's true. Just try to assist kids learning. Umm, I'm just playing with them, actually.**
 
 [<img src="./images/maze_letters.png" width="220">](./images/maze_letters.png) [<img src="./images/maze_blocks.png" width="220">](./images/maze_blocks.png)
 
 (Maze by letters, and by blocks in the Minecraft world.)
+
+### Widows C++ build tools (for mazelib)
+https://visualstudio.microsoft.com/downloads/
+
+Open the "Tools for Visual Studio 2022" in the page, then get the "Build Tools for Visual Studio 2022". The app/tool is stand-alone so **you don't need the Visual Studio 2022 itself.**
+
+Launch the app and you will know the name is Visual Studio Installer.
+Click the "Modify" then, find and install two components below in the "Individual components" tab.
+ 1.  Windows 10 SDK or Windows 11 SDK
+ 1.  MSVC v143 VS2022 C++ x64/x86 build tool (latest)
+
+Search windows sdk for (1), search msvc for (2).
 
 ## Files used in the digital clock
 #### [digitalclock.py](./digitalclock.py)

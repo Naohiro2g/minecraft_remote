@@ -1,4 +1,5 @@
 # Naohiro2g/minecraft_remote
+[**(English here.)**](./README.md)
 
 |[1.12 World of Color Update](https://www.youtube.com/watch?v=k2dQuIIUT-o)|[1.13 Update Aquatic](https://www.youtbe.com/watch?v=hcutClmY1pI)|[1.16 Nether update](https://www.youtube.com/watch?v=1DhWXAiNgfQ)|
 |--|--|--|
@@ -8,7 +9,6 @@
 色の世界（World of Color）で4年間、立ち止まっていました。いよいよ、ようやく、マインクラフトJava版 ver.1.16.5をScratchやPythonでコントロールできます。
 
 ## PythonやScratchでマイクラをリモコンする
-[**(English here.)**](./README.md)
 
 マインクラフトAPIを使ってScratchやPythonでコーディングして、ブロックを置いたり、スティーブをあちこち動かしたりなどできます。
 
@@ -20,7 +20,9 @@
 
 
 ## 版／バージョンと環境
-マイクラの版とバージョンの組み合わせによって、3種類の環境があります。Pythonモジュールについて、Java版1.12.2はラズパイ版と同じく従来のmcpiが使えますが、Java版1.16.5は新しいmcjeを使います。ラズパイ版はmodが不要で、Java版の2種類それぞれにマイクラと同じバージョンのmodと、modを収容するForgeが必要になります。
+マイクラの版とバージョンの組み合わせによって、3種類の環境があります。
+
+Pythonモジュールについて、Java版1.12.2はラズパイ版と同じく従来のmcpiが使えますが、Java版1.16.5は新しいmcjeを使います。ラズパイ版はmodが不要で、Java版の2種類それぞれにマイクラと同じバージョンのmodと、modを収容するForgeが必要になります。
 
 |Minecraft|Forge|mod|Python module|Scratch + Extension|
 |---|---|---|---|---|
