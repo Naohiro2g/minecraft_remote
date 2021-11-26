@@ -52,7 +52,7 @@ Java版マイクラのバージョン1.13「Update Aquatic、水のアップデ�
 mcpiモジュールをPypiからインストールするには、
 ``` sudo pip3 install mcpi ```(Mac, Linux) あるいは ``` pip install mcpi ```(Windows) で。
 
- - digitalclock.py：手作りのLCDフォントをダブルバッファで使い、「クラス」を学ぶことができます。時刻表示にシーランタンを使うのが好みですが、残念ながらMCPI（ラズパイ版）にはシーランタンがありません。
+ - [digitalclock.py](./digitalclock.py)：手作りのLCDフォントをダブルバッファで使い、「クラス」を学ぶことができます。時刻表示にシーランタンを使うのが好みですが、残念ながらMCPI（ラズパイ版）にはシーランタンがありません。
 
    - 日付と時刻を５ｘ７のLCDフォントで、以下のフォーマットにてリアルタイム表示するデジタル時計。（上の画像のやつ。）
 
@@ -67,7 +67,7 @@ mcpiモジュールをPypiからインストールするには、
     - z軸: 金ブロック
  - demo1.py, demo2.py :　axis_flat（軸とフラット化）と double_buffer_display（ダブルバッファ表示）モジュールの使い方デモ。
 
- - **（新作）** maze.py :　マイクラ世界に迷路を建築します。サプーさんというPython VTuberの作品。彼女の解説動画はこちら。
+ - **（新作）** [maze.py](./maze.py) :　マイクラ世界に迷路を建築します。サプーさんというPython VTuberの作品。彼女の解説動画はこちら。
 **[【Pythonでマイクラ操作！】自動で迷路を作成してマインクラフト上で遊んでみよう 〜 Minecraftプログラミング入門 〜](https://www.youtube.com/watch?v=iK3V8q2EiI8)**
    - mazelibというPythonモジュールを使っています。C++コードを含んでおり、Pypiにバイナリがないためインストール時にビルドが必要。
    - Mac, Linux：
@@ -88,11 +88,11 @@ https://visualstudio.microsoft.com/ja/downloads/
 ここで「Visual Studio 2022用のツール」を開き、Build Tools for Visual Studio 2022をゲット。スタンドアロンで動くので**Visual Studio自体は不要**。pipからの利用ならVisual Studio Build Toolsアプリを開くこともない。
 
 実態はVisual Studio Installerで、これを起動。
-「個別のコンポーネント」でWindowsのバージョンに合わせて
- - Windows 10 SDKとMSVC v142 C++ x64/x86ビルドツール あるいは
- - Windows 11 SDKとMSVC v143 C++ x64/x86ビルドツール
+「変更」 →「個別のコンポーネント」でWindowsのバージョンに合わせて、以下の２つを探し出してインストール。
+ 1.  Windows 10 SDK あるいは Windows 11 SDK
+ 1.  MSVC v143 VS2022 C++ x64/x86ビルドツール（最新）
 
-を探し出してインストール。前者はwindowsで検索。後者はmsvcで検索。
+(1)はwindowsで検索。(2)はmsvcで検索。
 
 ## デジタルクロックで使われているファイルたち
 
