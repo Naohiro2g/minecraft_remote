@@ -43,19 +43,21 @@ But, once again, the changes at version 1.17 was pretty large. For the compatibi
 Sorry, examples are only in Python, not for Scratch, so far. See [takecy's](https://github.com/takecx/RemoteControllerMod) to start in Scratch.
  - [hello_MCPI.py](./hello_MCPI.py), [hello_MCJE.py](./hello_MCJE.py), [hello_MCJE1122.py](./hello_MCJE1122.py) : Typical Hello World code. **Try this first to learn how to select Python module mcpi or mcje for your environment.** Install mcpi from Pypi with this. ``` pip3 install mcpi --user ``` or ``` pip install mcpi --user ```
 
- - digitalclock.py to display a realtime clock with time and date using 5 x 7, LCD font in the format as follows (also shown in the picture above):
+ - [digitalclock.py](digitalclock.py) to display a realtime clock with time and date using 5 x 7, LCD font in the format as follows (also shown in the picture above):
 ```
         2021-06-26
          21:28:45
 ```
 Using hand-made LCD font on double-buffer display, you can learn 'class'.  I prefer SEA_LANTERN_BLOCK for the time display but unfortunately it's not available in MCPI.
- - axis_flat.py : Module to draw x, y, and z-axis and to flatten the world in addition. Nice and useful utilities to prepare the world for learning.
+
+ - [axis_flat.py](axis_flat.py) : Module to draw x, y, and z-axis and to flatten the world in addition. Nice and useful utilities to prepare the world for learning.
   Axes with the virtual origin at (0, 80, 0) for MCJE, or (0, 20, 0) for MCPI using block types as follows:
     - x-axis: Stone blocks
     - y-axis: Grass on soil blocks
     - z-axis: Gold blocks
- - demo1.py, demo2.py : Usage of axis_flat or double_buffer_display modules.
- - **(NEW)** maze.py : Building a maze in the Minecraft world by supu, Python VTuber. Watch her movie on YouTube : https://www.youtube.com/watch?v=iK3V8q2EiI8
+
+ - [demo1.py](./demo1.py), [demo2.py](./demo2.py) : Usage of axis_flat or double_buffer_display modules.
+ - **(NEW)** [maze.py](./maze.py) : Building a maze in the Minecraft world by supu, Python VTuber. Watch her movie on YouTube : https://www.youtube.com/watch?v=iK3V8q2EiI8
 **"Remote Minecraft by Python"** — Let's create a maze automatically and play with it on Minecraft. — In Japanese without English CC, sorry.
    - Using a Python module named mazelib. It contains C++ code and there is no binary on Pypi, it needs to be built during installation with pip.
    - Mac, Linux：

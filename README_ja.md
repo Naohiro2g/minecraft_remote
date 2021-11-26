@@ -67,7 +67,8 @@ mcpiモジュールをPypiからインストールするには、
     - x軸: 石ブロック
     - y軸: 草土ブロック
     - z軸: 金ブロック
- - demo1.py, demo2.py :　axis_flat（軸とフラット化）と double_buffer_display（ダブルバッファ表示）モジュールの使い方デモ。
+
+ - [demo1.py](./demo1.py), [demo2.py](./demo2.py) :　axis_flat（軸とフラット化）と double_buffer_display（ダブルバッファ表示）モジュールの使い方デモ。
 
  - **（新作）** [maze.py](./maze.py) :　マイクラ世界に迷路を建築します。サプーさんというPython VTuberの作品。彼女の解説動画はこちら。
 **[【Pythonでマイクラ操作！】自動で迷路を作成してマインクラフト上で遊んでみよう 〜 Minecraftプログラミング入門 〜](https://www.youtube.com/watch?v=iK3V8q2EiI8)**
