@@ -32,7 +32,7 @@ Pythonモジュールについて、Java版1.12.2はラズパイ版と同じく�
 
 **OptiFineというmodは、Java版マイクラの見た目を簡素にして軽量化する事ができます。マイクラ、Forgeと同じバージョンを選ぶ必要があります。https://optifine.net/downloads**
 
-**Forgeを実行するために、Java SE 8 JREが必要になるかもしれません。 https://www.java.com/download/ie_manual.jsp**
+**Forgeを実行するために、Java SE 8 JREが必要になるかもしれません。 https://www.java.com/download/**
 
 Java版マイクラをラズパイを含むLinux、Mac、PCで動かすことができます。ラズパイでのJava版マイクラに関しては後述。
 
