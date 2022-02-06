@@ -1,4 +1,4 @@
-from mcpi import minecraft
+from mcje import minecraft
 
 def main():
     mc = minecraft.Minecraft.create()
