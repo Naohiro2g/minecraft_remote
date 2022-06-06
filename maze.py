@@ -40,7 +40,7 @@ def put_maze_block(mc, mark, x_pos, z_pos):
 
 
 def main(wait=0.1):
-    mc = Minecraft.create()
+    mc = Minecraft.create(port=param.PORT_MC)
     mc.player.setPos(12, 80, 12)
 
     mc.setBlocks(
