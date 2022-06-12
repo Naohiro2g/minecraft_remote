@@ -12,7 +12,6 @@ The intersection is not the real origin, but a virtual one.
 # for Minecraft Java Edition 1.16.5
 from mcje.minecraft import Minecraft
 import param_MCJE as param
-import mcpi.block as block
 
 # for Mineraft Java Edition 1.12.2
 # from mcje.minecraft import Minecraft
@@ -44,4 +43,4 @@ axis_flat.draw_XYZ_axis(mc, wait=0.3)
 
 mc.postToChat("クリーパーの頭を作る")
 
-mc.setBlocks(-5, 80, 5, -12, 88, 12, 35, 5)
+mc.setBlocks(-5, 80, 5, -12, 88, 12, param.LIME_WOOL_BLOCK)
