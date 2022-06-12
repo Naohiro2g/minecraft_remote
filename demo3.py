@@ -41,6 +41,7 @@ mc.postToChat("こんにちは！")
 axis_flat.reset_minecraft_world(mc, width=40)
 axis_flat.clear_XYZ_axis(mc, wait=0)
 axis_flat.draw_XYZ_axis(mc, wait=0.3)
+
 mc.postToChat("クリーパーの頭を作る")
 
 mc.setBlocks(-5, 80, 5, -12, 88, 12, 35, 5)
