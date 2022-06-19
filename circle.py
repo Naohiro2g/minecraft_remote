@@ -16,6 +16,5 @@ def setCircle(wait=0.1):
         mc.setBlock(CX,70,CZ,param.DIAMOND_BLOCK)
         sleep(wait)
         mc.postToChat(i)
-       
-    
+        
 setCircle()
