@@ -9,11 +9,12 @@ def setCircle(wait=0.1):
     radius=8
     i=0
     rad=np.linspace(0,2*np.pi,100)
-    CX=radius*np.cos(rad[i])
-    CZ=radius*np.sin(rad[i])
+    cx=radius*np.cos(rad[i])
+    cz=radius*np.sin(rad[i])
+    int(cx,cz)
     while i < 100:
         i += 1
-        mc.setBlock(CX,70,CZ,param.DIAMOND_BLOCK)
+        mc.setBlock(cx,70,cz,param.DIAMOND_BLOCK)
         sleep(wait)
         mc.postToChat(i)
         
