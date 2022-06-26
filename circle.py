@@ -4,10 +4,11 @@ import numpy as np
 
 def setCircle(mc,ca,cb,radius):
     i=0
-    rad=np.linspace(0,2*np.pi,5*radius)
+    rad=np.linspace(0,2*np.pi,100)
     cx=radius*np.cos(rad[i])
     cz=radius*np.sin(rad[i])
-    int(cx,cz)
+    int(cx)
+    int(cz)
     while i < 100:
         i += 1
         mc.setBlock(cx+ca,70,cz+cb,param.DIAMOND_BLOCK)
