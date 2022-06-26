@@ -2,6 +2,9 @@
 import tkinter
 from tkinter import messagebox
 import random
+from convert_mcje import MCJESweeper
+from mcje.minecraft import Minecraft
+import param_MCJE as param
 
 
 # 各種設定
@@ -44,6 +47,11 @@ class MineSweeper():
         self.open_mine = False
         self.play_game = False
 
+        # mcje側の操作
+        mc = Minecraft.create(port=param.PORT_MC)
+        mjs = MCJESweeper(mc)
+        mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
+        
         # 地雷を管理するボード
         self.cells = None
 
@@ -227,7 +235,7 @@ class MineSweeper():
                     i = x
 
         cell = self.cells[j][i]
-
+        print(cell,j,i)
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
             return
