@@ -12,6 +12,6 @@ def setCircle(mc,ca,cb,radius):
         i += 1
         mc.setBlock(cx+ca,70,cz+cb,param.DIAMOND_BLOCK)
         
-if __name__ == '__main__'
+if __name__ == '__main__':
     mc = Minecraft.create(port=param.PORT_MC)
     setCircle(mc,50,50,8)
