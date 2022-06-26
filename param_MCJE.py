@@ -36,3 +36,13 @@ DIAMOND_BLOCK = "diamnd_block"
 FURNACE_INACTIVE = "furnace"
 FURNACE_ACTIVE = "lit_furnace"
 GLASS_PANE = "glass_pane"
+
+# there are kind of concretes for instance
+LIGHT_BLUE_CONCRETE = "light_blue_concrete"
+ORANGE_CONCRETE = "orange_concrete"
+LIME_CONCRETE = "lime_concrete"
+PINK_CONCRETE = "pink_concrete"
+YELLOW_CONCRETE = "yellow_concrete"
+LIGHT_GRAY_CONCRETE = "light_gray_concrete"
+BROWN_CONCRETE = "brown_concrete"
+RED_CONCRETE = "red_concrete"
