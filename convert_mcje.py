@@ -31,9 +31,9 @@ class MCJESweeper():
             
     
     
-
-mc = Minecraft.create(port=param.PORT_MC)
-mjs = MCJESweeper(mc)
+if __name__ == '__main__':
+    mc = Minecraft.create(port=param.PORT_MC)
+    mjs = MCJESweeper(mc)
 
 
 

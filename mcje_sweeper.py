@@ -30,7 +30,11 @@ fg_color = {
 # 定数定義
 MINE = -1
 
-
+#mcje側の操作
+mc = Minecraft.create(port=param.PORT_MC)
+mjs = MCJESweeper(mc)
+mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
+        
 class MineSweeper():
     def __init__(self, app):
 
@@ -47,11 +51,6 @@ class MineSweeper():
         self.open_mine = False
         self.play_game = False
 
-        # mcje側の操作
-        mc = Minecraft.create(port=param.PORT_MC)
-        mjs = MCJESweeper(mc)
-        mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
-        
         # 地雷を管理するボード
         self.cells = None
 
