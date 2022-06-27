@@ -20,7 +20,7 @@ class MCJESweeper():
         self.mass_w = 0
         while self.mass_w < w:
             while self.mass_h < h:
-                self.mc.setBlocks(self.mass_x-3,STA_Y,self.mass_z-3,self.mass_x+3,STA_Y,self.mass_z+3,param.RED_CONCRETE)
+                self.mc.setBlocks(self.mass_x-3,STA_Y,self.mass_z-3,self.mass_x+3,STA_Y,self.mass_z+3,param.BLACK_CONCRETE)
                 self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.STONE)
                 self.mass_x -= 6
                 self.mass_h += 1
