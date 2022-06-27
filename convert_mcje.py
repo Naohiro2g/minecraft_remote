@@ -14,7 +14,7 @@ class MCJESweeper():
         self.mass_x = STA_X
         self.mass_z = STA_Z
         self.mc = mc
-    
+
     def setMass(self,w,h):
         self.mass_h = 0
         self.mass_w = 0
@@ -28,13 +28,15 @@ class MCJESweeper():
             self.mass_h = 0
             self.mass_z += 6
             self.mass_w += 1
-            
-    
-    
-if __name__ == '__main__':
+
+    def game_over(self):
+        self.mc.postToChat("Game Over!")
+
+    def game_clear(self):
+        self.mc.postToChat("おめでとうございます！ゲームクリア！")
+
+if __name__ == "__main__":
+    BOARD_WIDTH, BOARD_HEIGHT = 20, 10
     mc = Minecraft.create(port=param.PORT_MC)
     mjs = MCJESweeper(mc)
-
-
-
-
+    mjs.setMass(BOARD_WIDTH, BOARD_HEIGHT)

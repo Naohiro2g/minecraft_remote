@@ -30,18 +30,20 @@ fg_color = {
 # 定数定義
 MINE = -1
 
-#mcje側の操作
-mc = Minecraft.create(port=param.PORT_MC)
-mjs = MCJESweeper(mc)
-mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
-        
+
 class MineSweeper():
     def __init__(self, app):
+
+        # mcje側の初期化
+        mc = Minecraft.create(port=param.PORT_MC)
+        mc.postToChat("Minesweeper!")
+        self.mjs = MCJESweeper(mc)
+        self.mjs.setMass(BOARD_WIDTH, BOARD_HEIGHT)
 
         # *** 各種メンバの初期化 *** #
 
         self.app = app
-        self.cells = None 
+        self.cells = None
         self.labels = None
         self.width = BOARD_WIDTH
         self.height = BOARD_HEIGHT
@@ -78,7 +80,7 @@ class MineSweeper():
 
         # 最後にゲーム中フラグをTrueに設定
         self.play_game = True
-        
+
 
     # ボードの初期化
     def init_cells(self):
@@ -269,7 +271,7 @@ class MineSweeper():
             self.open_neighbor(i - 1, j + 1)
             self.open_neighbor(i, j + 1)
             self.open_neighbor(i + 1, j + 1)
-            
+
 
         # ゲームオーバーならゲームオーバー処理
         if self.open_mine:
@@ -342,6 +344,8 @@ class MineSweeper():
             "ゲームオーバー",
             "地雷を開いてしまいました..."
         )
+        self.mjs.game_over()
+
 
     # ゲームクリア時の処理
     def game_clear(self):
