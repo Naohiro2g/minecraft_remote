@@ -32,7 +32,6 @@ class MCJESweeper():
     def cellOpen(self,j,i):
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
-        print(self.mass_x,self.mass_z)
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
 
     def check_mine(self,mine_num,j,i):
@@ -47,13 +46,12 @@ class MCJESweeper():
                     self.offscreen[line_offset].append(param.RED_CONCRETE)
                 else:
                     self.offscreen[line_offset].append(param.CONCRETE)
-        print(self.offscreen)
+
         self.draw_num(j,i)
 
     def draw_num(self,j,i):
         pen_x = STA_X - j*6 + 2
         pen_z = STA_Z + i*6 - 1
-        print(pen_x,pen_z)
         count = 0
         for line in self.offscreen:
             for dot in line:
@@ -69,11 +67,10 @@ class MCJESweeper():
     def raiseFrag(self,j,i):
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
-        print(self.mass_x,self.mass_z)
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.ORANGE_CONCRETE)
     
     def game_over(self):
-        self.mc.postToChat("ばーかばーか地雷踏んでやんの～")
+        self.mc.postToChat("YOU LOSE,俺の勝ち、なんで負けたか明日までに考えといてください。ほな頂きます。")
 
 if __name__ == '__main__':
     BOARD_WIDTH, BOARD_HEIGHT = 20, 10

@@ -2,6 +2,8 @@ FONT_HEIGHT=5
 FONT_WIDTH =3
 
 font_design = {
+    -1:[],
+    0:[],
     1:[
         ' 0 ',
         '00 ',

@@ -196,8 +196,9 @@ class MineSweeper():
                 if self.labels[y][x] == label:
                     j = y
                     i = x
+
         self.mjs.raiseFrag(j,i)
-        print(j,i)
+
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
             return
@@ -242,7 +243,7 @@ class MineSweeper():
 
         cell = self.cells[j][i]
         self.mjs.cellOpen(j,i)
-        print(cell,j,i)
+        self.mjs.check_mine(cell,j,i)
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
             return
@@ -301,6 +302,7 @@ class MineSweeper():
         # その座標のラベルを取得
         label = self.labels[j][i]
         self.mjs.cellOpen(j,i)
+        self.mjs.check_mine(self.cells[j][i],j,i)
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
             return
@@ -375,6 +377,7 @@ class MineSweeper():
             for i in range(self.width):
                 label = self.labels[j][i]
                 self.mjs.cellOpen(j,i)
+                self.mjs.check_mine(self.cells[j][i],j,i)
                 # ラベルの座標に応じて表示するテキストと色を設定
                 text, bg, fg = self.get_text_info(self.cells[j][i])
 
