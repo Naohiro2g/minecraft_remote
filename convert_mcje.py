@@ -28,12 +28,27 @@ class MCJESweeper():
             self.mass_h = 0
             self.mass_z += 6
             self.mass_w += 1
-            
+
+    def cellOpen(self,j,i):
+        self.mass_x = STA_X - j*6
+        self.mass_z = STA_Z + i*6
+        print(self.mass_x,self.mass_z)
+        self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
+
+    def raiseFrag(self,j,i):
+        self.mass_x = STA_X - j*6
+        self.mass_z = STA_Z + i*6
+        print(self.mass_x,self.mass_z)
+        self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.ORANGE_CONCRETE)
     
-    
+    def game_over(self):
+        self.mc.postToChat("ばーかばーか地雷踏んでやんの～")
+
 if __name__ == '__main__':
+    BOARD_WIDTH, BOARD_HEIGHT = 20, 10
     mc = Minecraft.create(port=param.PORT_MC)
     mjs = MCJESweeper(mc)
+    mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
 
 
 

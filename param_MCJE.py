@@ -41,6 +41,7 @@ SLIME_BLOCK = "slime"
 REDSTONE_BLOCK = "redstone_block"
 
 # there are kind of concretes for instance
+CONCRETE = "white_concrete"
 LIGHT_BLUE_CONCRETE = "light_blue_concrete"
 ORANGE_CONCRETE = "orange_concrete"
 LIME_CONCRETE = "lime_concrete"

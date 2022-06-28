@@ -29,14 +29,15 @@ fg_color = {
 
 # 定数定義
 MINE = -1
-
-#mcje側の操作
-mc = Minecraft.create(port=param.PORT_MC)
-mjs = MCJESweeper(mc)
-mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
         
 class MineSweeper():
     def __init__(self, app):
+
+        #mcje側の操作
+        mc = Minecraft.create(port=param.PORT_MC)
+        mc.postToChat("Minesweeper!")
+        self.mjs = MCJESweeper(mc)
+        self.mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
 
         # *** 各種メンバの初期化 *** #
 
@@ -190,7 +191,13 @@ class MineSweeper():
 
         # クリックされたラベルを取得
         label = event.widget
-
+        for y in range(self.height):
+            for x in range(self.width):
+                if self.labels[y][x] == label:
+                    j = y
+                    i = x
+        self.mjs.raiseFrag(j,i)
+        print(j,i)
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
             return
@@ -234,6 +241,7 @@ class MineSweeper():
                     i = x
 
         cell = self.cells[j][i]
+        self.mjs.cellOpen(j,i)
         print(cell,j,i)
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
@@ -292,7 +300,7 @@ class MineSweeper():
 
         # その座標のラベルを取得
         label = self.labels[j][i]
-
+        self.mjs.cellOpen(j,i)
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
             return
@@ -338,6 +346,7 @@ class MineSweeper():
         self.play_game = False
 
         # メッセージを表示
+        self.mjs.game_over()
         messagebox.showerror(
             "ゲームオーバー",
             "地雷を開いてしまいました..."
@@ -365,7 +374,7 @@ class MineSweeper():
         for j in range(self.height):
             for i in range(self.width):
                 label = self.labels[j][i]
-
+                self.mjs.cellOpen(j,i)
                 # ラベルの座標に応じて表示するテキストと色を設定
                 text, bg, fg = self.get_text_info(self.cells[j][i])
 
