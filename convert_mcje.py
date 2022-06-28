@@ -29,12 +29,32 @@ class MCJESweeper():
             self.mass_z += 6
             self.mass_w += 1
 
+    def change_color(self,num):
+        self.concrete_c = param.CONCRETE
+        if num == 1:
+            self.concrete_c = param.LIGHT_BLUE_CONCRETE
+        elif num == 2:
+            self.concrete_c = param.ORANGE_CONCRETE
+        elif num == 3:
+            self.concrete_c = param.LIME_CONCRETE
+        elif num == 4:
+            self.concrete_c = param.PINK_CONCRETE
+        elif num == 5:
+            self.concrete_c = param.YELLOW_CONCRETE
+        elif num == 6:
+            self.concrete_c = param.LIGHT_GRAY_CONCRETE
+        elif num == 7:
+            self.concrete_c = param.BROWN_CONCRETE
+        elif num == 8:
+            self.concrete_c = param.RED_CONCRETE
+
     def cellOpen(self,j,i):
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
 
     def check_mine(self,mine_num,j,i):
+        self.change_color(mine_num)
         self.offscreen = []
         rendition = font_design[mine_num]
         line_offset = 0
@@ -43,7 +63,7 @@ class MCJESweeper():
                 self.offscreen.append([])
             for dot in line:
                 if dot == '0':
-                    self.offscreen[line_offset].append(param.RED_CONCRETE)
+                    self.offscreen[line_offset].append(self.concrete_c)
                 else:
                     self.offscreen[line_offset].append(param.CONCRETE)
 
