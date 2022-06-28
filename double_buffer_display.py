@@ -61,6 +61,7 @@ class BufferDisplay():
             letter_offset = 0
             for letter in message:
                 rendition = font_design[letter]
+                print(letter)
                 line_offset = 0
                 for line in rendition:
                     if len(self.offscreen) <= line_offset:

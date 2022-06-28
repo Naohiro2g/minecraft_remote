@@ -35,6 +35,37 @@ class MCJESweeper():
         print(self.mass_x,self.mass_z)
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
 
+    def check_mine(self,mine_num,j,i):
+        self.offscreen = []
+        rendition = font_design[mine_num]
+        line_offset = 0
+        for line in rendition:
+            if len(self.offscreen) <= line_offset:
+                self.offscreen.append([])
+            for dot in line:
+                if dot == '0':
+                    self.offscreen[line_offset].append(param.RED_CONCRETE)
+                else:
+                    self.offscreen[line_offset].append(param.CONCRETE)
+        print(self.offscreen)
+        self.draw_num(j,i)
+
+    def draw_num(self,j,i):
+        pen_x = STA_X - j*6 + 2
+        pen_z = STA_Z + i*6 - 1
+        print(pen_x,pen_z)
+        count = 0
+        for line in self.offscreen:
+            for dot in line:
+                self.mc.setBlock(pen_x,STA_Y,pen_z,dot)
+                pen_z += 1
+                count += 1
+                if count == 3:
+                    count =0
+                    pen_z -= 3
+                    pen_x -= 1
+                
+
     def raiseFrag(self,j,i):
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
@@ -49,6 +80,7 @@ if __name__ == '__main__':
     mc = Minecraft.create(port=param.PORT_MC)
     mjs = MCJESweeper(mc)
     mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
+    mjs.check_mine(2,0,0)
 
 
 
