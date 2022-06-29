@@ -29,20 +29,19 @@ fg_color = {
 
 # 定数定義
 MINE = -1
-        
+
 class MineSweeper():
     def __init__(self, app):
 
-        #mcje側の操作
+        # mcje側の初期化
         mc = Minecraft.create(port=param.PORT_MC)
         mc.postToChat("Minesweeper!")
         self.mjs = MCJESweeper(mc)
-        self.mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
 
         # *** 各種メンバの初期化 *** #
 
         self.app = app
-        self.cells = None 
+        self.cells = None
         self.labels = None
         self.width = BOARD_WIDTH
         self.height = BOARD_HEIGHT
@@ -79,7 +78,7 @@ class MineSweeper():
 
         # 最後にゲーム中フラグをTrueに設定
         self.play_game = True
-        
+
 
     # ボードの初期化
     def init_cells(self):
@@ -166,6 +165,8 @@ class MineSweeper():
                 # その座標のラベルのインスタンスを覚えておく
                 self.labels[j][i] = label
 
+                self.mjs.set_cell(column=i, row=j * -1)
+
     # イベントを設定
     def set_events(self):
 
@@ -180,7 +181,7 @@ class MineSweeper():
 
                 # 右クリック時のイベント設定
                 # 右クリックが反応しない場合は第１引数を"<ButtonPress-3>"に変更してみてください
-                label.bind("<ButtonPress-2>", self.raise_flag)
+                label.bind("<ButtonPress-3>", self.raise_flag)
 
     # 右クリック時に実行する関数
     def raise_flag(self, event):
@@ -197,7 +198,6 @@ class MineSweeper():
                     j = y
                     i = x
 
-        self.mjs.raiseFrag(j,i)
 
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
@@ -214,6 +214,7 @@ class MineSweeper():
                 text="F",
                 bg=bg
             )
+            self.mjs.raiseFrag(j, i)
         else:
             # ラベルの色を設定
             bg = EMPTY_BG_COLOR
@@ -223,6 +224,7 @@ class MineSweeper():
                 text="",
                 bg=bg
             )
+            self.mjs.dropFrag(j, i)
 
     # 左クリック時に実行する関数
     def open_cell(self, event):
@@ -242,8 +244,7 @@ class MineSweeper():
                     i = x
 
         cell = self.cells[j][i]
-        self.mjs.cellOpen(j,i)
-        self.mjs.check_mine(cell,j,i)
+
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
             return
@@ -264,6 +265,8 @@ class MineSweeper():
             fg=fg,
             relief=tkinter.SUNKEN
         )
+        self.mjs.cellOpen(j, i)
+        self.mjs.check_mine(cell, j, i)
 
         # 開いたマス数をカウントアップ
         self.open_num += 1
@@ -278,7 +281,7 @@ class MineSweeper():
             self.open_neighbor(i - 1, j + 1)
             self.open_neighbor(i, j + 1)
             self.open_neighbor(i + 1, j + 1)
-            
+
 
         # ゲームオーバーならゲームオーバー処理
         if self.open_mine:
@@ -301,8 +304,7 @@ class MineSweeper():
 
         # その座標のラベルを取得
         label = self.labels[j][i]
-        self.mjs.cellOpen(j,i)
-        self.mjs.check_mine(self.cells[j][i],j,i)
+
         # 既にそのマスを開いている場合は何もしない
         if label.cget("relief") != tkinter.RAISED:
             return
@@ -323,6 +325,8 @@ class MineSweeper():
             fg=fg,
             relief=tkinter.SUNKEN
         )
+        self.mjs.cellOpen(j, i)
+        self.mjs.check_mine(self.cells[j][i], j, i)
 
         # 開いたマス数をカウントアップ
         self.open_num += 1
@@ -376,8 +380,7 @@ class MineSweeper():
         for j in range(self.height):
             for i in range(self.width):
                 label = self.labels[j][i]
-                self.mjs.cellOpen(j,i)
-                self.mjs.check_mine(self.cells[j][i],j,i)
+
                 # ラベルの座標に応じて表示するテキストと色を設定
                 text, bg, fg = self.get_text_info(self.cells[j][i])
 
@@ -388,6 +391,8 @@ class MineSweeper():
                     fg=fg,
                     relief=tkinter.SUNKEN
                 )
+                self.mjs.cellOpen(j,i)
+                self.mjs.check_mine(self.cells[j][i],j,i)
 
     # テキストと文字と背景色を取得する関数
     def get_text_info(self, num):

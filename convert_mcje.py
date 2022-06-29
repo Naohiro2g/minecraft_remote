@@ -9,25 +9,20 @@ STA_X = 50
 STA_Y = 71
 STA_Z = 50
 
+
 class MCJESweeper():
-    def __init__(self,mc):
+    def __init__(self, mc):
         self.mass_x = STA_X
         self.mass_z = STA_Z
         self.mc = mc
-    
-    def setMass(self,w,h):
-        self.mass_h = 0
-        self.mass_w = 0
-        while self.mass_w < w:
-            while self.mass_h < h:
-                self.mc.setBlocks(self.mass_x-3,STA_Y,self.mass_z-3,self.mass_x+3,STA_Y,self.mass_z+3,param.BLACK_CONCRETE)
-                self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.STONE)
-                self.mass_x -= 6
-                self.mass_h += 1
-            self.mass_x = STA_X
-            self.mass_h = 0
-            self.mass_z += 6
-            self.mass_w += 1
+
+    def set_cell(self, column=0, row=0):
+        self.mc.setBlocks(STA_X + row * 6 - 3, STA_Y, STA_Z + column * 6 - 3,
+                          STA_X + row * 6 + 3, STA_Y, STA_Z + column * 6 + 3,
+                          param.BLACK_CONCRETE)
+        self.mc.setBlocks(STA_X + row * 6 - 2, STA_Y, STA_Z + column * 6 - 2,
+                          STA_X + row * 6 + 2, STA_Y, STA_Z + column * 6 + 2,
+                          param.STONE)
 
     def change_color(self,num):
         self.concrete_c = param.CONCRETE
@@ -82,15 +77,20 @@ class MCJESweeper():
                     count =0
                     pen_z -= 3
                     pen_x -= 1
-                
 
     def raiseFrag(self,j,i):
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.ORANGE_CONCRETE)
-    
+
+    def dropFrag(self,j,i):
+        self.mass_x = STA_X - j*6
+        self.mass_z = STA_Z + i*6
+        self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
+
     def game_over(self):
         self.mc.postToChat("YOU LOSE,俺の勝ち、なんで負けたか明日までに考えといてください。ほな頂きます。")
+
 
 if __name__ == '__main__':
     BOARD_WIDTH, BOARD_HEIGHT = 20, 10
@@ -98,7 +98,3 @@ if __name__ == '__main__':
     mjs = MCJESweeper(mc)
     mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
     mjs.check_mine(2,0,0)
-
-
-
-
