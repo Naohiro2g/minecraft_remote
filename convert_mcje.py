@@ -26,7 +26,11 @@ class MCJESweeper():
 
     def change_color(self,num):
         self.concrete_c = param.CONCRETE
-        if num == 1:
+        if num == -1:
+            self.concrete_c = param.REDSTONE_BLOCK
+        elif num == 0:
+            self.concrete_c = param.CONCRETE
+        elif num == 1:
             self.concrete_c = param.LIGHT_BLUE_CONCRETE
         elif num == 2:
             self.concrete_c = param.ORANGE_CONCRETE
