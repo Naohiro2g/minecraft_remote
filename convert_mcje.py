@@ -60,7 +60,6 @@ class MCJESweeper():
         for line in font_design[mine_num]:  
             dot_offset = 0             
             for dot in line:
-                print(dot_offset)  
                 if dot=='0':
                     block_color_id = self.concrete_c
                 else:
