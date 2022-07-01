@@ -1,6 +1,6 @@
 from mcje.minecraft import Minecraft
 import param_MCJE as param
-import circle as cr
+from circle import setCircle
 from ms_font import font_design,FONT_HEIGHT,FONT_WIDTH
 
 MASS_HEIGHT = FONT_HEIGHT + 2
@@ -54,33 +54,27 @@ class MCJESweeper():
 
     def check_mine(self,mine_num,j,i):
         self.change_color(mine_num)
-        self.offscreen = []
-        rendition = font_design[mine_num]
-        line_offset = 0
-        for line in rendition:
-            if len(self.offscreen) <= line_offset:
-                self.offscreen.append([])
-            for dot in line:
-                if dot == '0':
-                    self.offscreen[line_offset].append(self.concrete_c)
-                else:
-                    self.offscreen[line_offset].append(param.CONCRETE)
-
-        self.draw_num(j,i)
-
-    def draw_num(self,j,i):
         pen_x = STA_X - j*6 + 2
         pen_z = STA_Z + i*6 - 1
-        count = 0
-        for line in self.offscreen:
+        line_offset = 0                     
+        for line in font_design[mine_num]:  
+            dot_offset = 0             
             for dot in line:
-                self.mc.setBlock(pen_x,STA_Y,pen_z,dot)
-                pen_z += 1
-                count += 1
-                if count == 3:
-                    count =0
-                    pen_z -= 3
-                    pen_x -= 1
+                print(dot_offset)  
+                if dot=='0':
+                    block_color_id = self.concrete_c
+                else:
+                    block_color_id = param.CONCRETE
+                self.mc.setBlock(
+                    pen_x - line_offset,
+                    STA_Y,
+                    pen_z + dot_offset,
+                    block_color_id)
+
+                dot_offset += 1
+            line_offset += 1
+        
+
 
     def raiseFrag(self,j,i):
         self.mass_x = STA_X - j*6
@@ -100,5 +94,5 @@ if __name__ == '__main__':
     BOARD_WIDTH, BOARD_HEIGHT = 20, 10
     mc = Minecraft.create(port=param.PORT_MC)
     mjs = MCJESweeper(mc)
-    mjs.setMass(BOARD_WIDTH,BOARD_HEIGHT)
+    mjs.set_cell(BOARD_WIDTH,BOARD_HEIGHT)
     mjs.check_mine(2,0,0)
