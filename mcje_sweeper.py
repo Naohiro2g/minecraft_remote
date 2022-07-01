@@ -375,10 +375,14 @@ class MineSweeper():
 
     # マスを全て開く
     def open_all(self):
-
+        mine_sel = []
         # 全マスに対するループ
         for j in range(self.height):
             for i in range(self.width):
+
+                if self.cells[j][i] == MINE:
+                    mine_sel.append([j,i])
+
                 label = self.labels[j][i]
 
                 # ラベルの座標に応じて表示するテキストと色を設定
@@ -393,6 +397,9 @@ class MineSweeper():
                 )
                 self.mjs.cellOpen(j,i)
                 self.mjs.check_mine(self.cells[j][i],j,i)
+        self.mjs.bomb_eff(mine_sel)
+
+                
 
     # テキストと文字と背景色を取得する関数
     def get_text_info(self, num):

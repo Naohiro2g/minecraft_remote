@@ -1,5 +1,6 @@
 from mcje.minecraft import Minecraft
 import param_MCJE as param
+import random
 from circle import setCircle
 from ms_font import font_design,FONT_HEIGHT,FONT_WIDTH
 
@@ -15,6 +16,7 @@ class MCJESweeper():
         self.mass_x = STA_X
         self.mass_z = STA_Z
         self.mc = mc
+        self.mc.setBlocks(STA_X+30,STA_Y+1,STA_Z-30,STA_X-210,STA_Y+1,STA_Z+210,param.AIR)
 
     def set_cell(self, column=0, row=0):
         self.mc.setBlocks(STA_X + row * 6 - 3, STA_Y, STA_Z + column * 6 - 3,
@@ -84,6 +86,18 @@ class MCJESweeper():
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
+
+    def bomb_eff(self,mine_sel):
+        for line in random.sample(mine_sel,random.randint(4,7)):
+            dot_offset = 0
+            for dot in line:
+                if dot_offset == 0:
+                    self.mass_x = STA_X - dot*6
+                if dot_offset == 1:
+                    self.mass_z = STA_Z + dot*6
+                dot_offset += 1
+            print(self.mass_x,self.mass_z)
+            setCircle(self.mc,self.mass_x,self.mass_z,STA_Y + 1,random.randint(10,30))
 
     def game_over(self):
         self.mc.postToChat("YOU LOSE,俺の勝ち、なんで負けたか明日までに考えといてください。ほな頂きます。")
