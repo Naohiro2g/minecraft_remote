@@ -1,7 +1,7 @@
 from mcje.minecraft import Minecraft
 import param_MCJE as param
 import random
-from circle import setCircle,circleEffect
+from circle import setCircle
 from ms_font import font_design,FONT_HEIGHT,FONT_WIDTH
 import time
 

@@ -4,7 +4,7 @@ import numpy as np
 
 def setCircle(mc,ca,cb,cc,radius,block):
     i=0
-    a=1000
+    a=300
     if radius <= 15:
         a = 100
     rad=np.linspace(0,2*np.pi,a)
