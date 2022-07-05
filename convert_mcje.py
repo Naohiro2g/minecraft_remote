@@ -1,8 +1,9 @@
 from mcje.minecraft import Minecraft
 import param_MCJE as param
 import random
-from circle import setCircle
+from circle import setCircle,circleEffect
 from ms_font import font_design,FONT_HEIGHT,FONT_WIDTH
+import time
 
 MASS_HEIGHT = FONT_HEIGHT + 2
 MASS_WIDTH = FONT_WIDTH + 4
@@ -88,16 +89,33 @@ class MCJESweeper():
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
 
     def bomb_eff(self,mine_sel):
-        for line in random.sample(mine_sel,random.randint(4,7)):
+        cx = []
+        cz = []
+        rr = []
+        for line in random.sample(mine_sel,4):
             dot_offset = 0
             for dot in line:
                 if dot_offset == 0:
-                    self.mass_x = STA_X - dot*6
+                    cx.append(STA_X - dot*6)
                 if dot_offset == 1:
-                    self.mass_z = STA_Z + dot*6
+                    cz.append(STA_Z + dot*6)
                 dot_offset += 1
-            print(self.mass_x,self.mass_z)
-            setCircle(self.mc,self.mass_x,self.mass_z,STA_Y + 1,random.randint(10,30))
+            rr.append(random.randint(15,30))
+        count = 0
+        while count <= 30:
+            i = [0,1,2,3]
+            for a in i:
+                setCircle(self.mc,cx[a],cz[a],STA_Y+1,count,param.RED_GLASS)
+            time.sleep(0.1)
+            for a in i:
+                setCircle(self.mc,cx[a],cz[a],STA_Y+1,count,param.AIR)
+            b = 0
+            for c in rr:
+                if c == count:
+                    del rr[b]
+                b +=1
+            count+=1
+
 
     def game_over(self):
         self.mc.postToChat("YOU LOSE,俺の勝ち、なんで負けたか明日までに考えといてください。ほな頂きます。")
