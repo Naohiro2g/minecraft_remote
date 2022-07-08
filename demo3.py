@@ -27,10 +27,17 @@ import axis_flat
 # mc = Minecraft.create(address='nao2g005', port=param.PORT_MC)
 
 mc = Minecraft.create(port=param.PORT_MC)  # MCJE:14712, MCPI:4711
+<<<<<<< HEAD
 mc.postToChat("demo3")
 
 # In Java Edition, you can use Japanese or other laguages.
 mc.postToChat("建築")
+=======
+mc.postToChat("demo1")
+
+# In Java Edition, you can use Japanese or other laguages.
+mc.postToChat("こんにちは！")
+>>>>>>> f50bbf28d746b550ab412bf174fb588c745265fc
 
 # for MCJE 1.12.2
 # mc.player.setPos(0,100,0)
@@ -38,5 +45,28 @@ mc.postToChat("建築")
 
 
 axis_flat.reset_minecraft_world(mc, width=40)
+<<<<<<< HEAD
 axis_flat.clear_XYZ_axis(mc, wait=0)
 axis_flat.draw_XYZ_axis(mc, wait=0.3)
+=======
+
+mc.postToChat("クリーパーの頭を作る")
+x=5
+y=63
+z=10
+BLOCK1=param.GOLD_BLOCK
+BLOCK2=param.BLACK_WOOL_BLOCK
+mc.setBlocks(x, y, z, x-7, y+7, z+7, BLOCK1)
+
+mc.setBlocks(x-2, y, z, x-2, y+2, z, BLOCK2)
+
+mc.setBlocks(x-5, y, z, x-5, y+2, z, BLOCK2)
+
+mc.setBlocks(x-3, y+1, z, x-4, y+3, z, BLOCK2)
+
+mc.setBlocks(x-1, y+4, z, x-2, y+5, z, BLOCK2)
+
+mc.setBlocks(x-6, y+4, z, x-5, y+5, z, BLOCK2)
+
+mc.postToChat("完成！！！")
+>>>>>>> f50bbf28d746b550ab412bf174fb588c745265fc
