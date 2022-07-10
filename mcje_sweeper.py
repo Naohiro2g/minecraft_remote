@@ -214,7 +214,7 @@ class MineSweeper():
                 text="F",
                 bg=bg
             )
-            self.mjs.raiseFrag(j, i)
+            self.mjs.raise_flag(j, i)
         else:
             # ラベルの色を設定
             bg = EMPTY_BG_COLOR
@@ -224,7 +224,7 @@ class MineSweeper():
                 text="",
                 bg=bg
             )
-            self.mjs.dropFrag(j, i)
+            self.mjs.drop_flag(j, i)
 
     # 左クリック時に実行する関数
     def open_cell(self, event):
@@ -265,7 +265,7 @@ class MineSweeper():
             fg=fg,
             relief=tkinter.SUNKEN
         )
-        self.mjs.cellOpen(j, i)
+        self.mjs.cell_open(j, i)
         self.mjs.check_mine(cell, j, i)
 
         # 開いたマス数をカウントアップ
@@ -325,7 +325,7 @@ class MineSweeper():
             fg=fg,
             relief=tkinter.SUNKEN
         )
-        self.mjs.cellOpen(j, i)
+        self.mjs.cell_open(j, i)
         self.mjs.check_mine(self.cells[j][i], j, i)
 
         # 開いたマス数をカウントアップ
@@ -395,7 +395,7 @@ class MineSweeper():
                     fg=fg,
                     relief=tkinter.SUNKEN
                 )
-                self.mjs.cellOpen(j,i)
+                self.mjs.cell_open(j,i)
                 self.mjs.check_mine(self.cells[j][i],j,i)
         self.mjs.bomb_eff(mine_sel)
 

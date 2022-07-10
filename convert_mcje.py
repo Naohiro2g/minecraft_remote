@@ -50,7 +50,7 @@ class MCJESweeper():
         elif num == 8:
             self.concrete_c = param.RED_CONCRETE
 
-    def cellOpen(self,j,i):
+    def cell_open(self,j,i):
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
@@ -78,12 +78,12 @@ class MCJESweeper():
         
 
 
-    def raiseFrag(self,j,i):
+    def raise_flag(self,j,i):
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.ORANGE_CONCRETE)
 
-    def dropFrag(self,j,i):
+    def drop_flag(self,j,i):
         self.mass_x = STA_X - j*6
         self.mass_z = STA_Z + i*6
         self.mc.setBlocks(self.mass_x-2,STA_Y,self.mass_z-2,self.mass_x+2,STA_Y,self.mass_z+2,param.CONCRETE)
