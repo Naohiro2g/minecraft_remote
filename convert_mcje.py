@@ -101,19 +101,21 @@ class MCJESweeper():
                     cz.append(STA_Z + dot*6)
                 dot_offset += 1
             rr.append(random.randint(15,30))
+        rr.sort()
+        i = [0,1,2,3]
+        bomb = True
         count = 0
-        while count <= 30:
-            i = [0,1,2,3]
+        while bomb == True:
             for a in i:
                 setCircle(self.mc,cx[a],cz[a],STA_Y+1,count,param.RED_GLASS)
             time.sleep(0.1)
             for a in i:
                 setCircle(self.mc,cx[a],cz[a],STA_Y+1,count,param.AIR)
-            b = 0
-            for c in rr:
-                if c == count:
-                    del rr[b]
-                b +=1
+            if rr[0] <= count:
+                i.remove(random.choice(i))
+                print(i)
+            if len(i) == 0:
+                bomb = False
             count+=1
 
 
