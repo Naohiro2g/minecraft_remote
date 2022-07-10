@@ -106,6 +106,7 @@ class MCJESweeper():
         bomb = True
         count = 0
         while bomb == True:
+            print(rr[0])
             for a in i:
                 setCircle(self.mc,cx[a],cz[a],STA_Y+1,count,param.RED_GLASS)
             time.sleep(0.1)
@@ -113,7 +114,7 @@ class MCJESweeper():
                 setCircle(self.mc,cx[a],cz[a],STA_Y+1,count,param.AIR)
             if rr[0] <= count:
                 i.remove(random.choice(i))
-                print(i)
+                del rr[0]
             if len(i) == 0:
                 bomb = False
             count+=1
