@@ -1,35 +1,35 @@
-def set_creeper(mc, x=0, z=0, y=63, block_id="gold_block", block_eye_id="black_wool", face="normal"):
+def set_creeper(mc, x=0, z=0, y=63, block_id="gold_block", block_face_id="black_wool", face="normal"):
     mc.setBlocks(x, y, z, x-7, y+7, z+7, block_id)
     if face == "normal":
-        mc.setBlocks(x-2, y, z, x-2, y+2, z, block_eye_id)
-        mc.setBlocks(x-5, y, z, x-5, y+2, z, block_eye_id)
-        mc.setBlocks(x-3, y+1, z, x-4, y+3, z, block_eye_id)
-        mc.setBlocks(x-1, y+4, z, x-2, y+5, z, block_eye_id)
-        mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_eye_id)
-    elif face == "smail":
-        mc.setBlocks(x-2, y+1, z, x-2, y+2, z, block_eye_id)
-        mc.setBlocks(x-5, y+1, z, x-5, y+2, z, block_eye_id)
-        mc.setBlocks(x-3, y, z, x-4, y+1, z, block_eye_id)
-        mc.setBlocks(x-1, y+4, z, x-2, y+5, z, block_eye_id)
-        mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_eye_id)
-    elif face == "smail_wink":
-        mc.setBlocks(x-2, y+1, z, x-2, y+2, z, block_eye_id)
-        mc.setBlocks(x-5, y+1, z, x-5, y+2, z, block_eye_id)
-        mc.setBlocks(x-3, y, z, x-4, y+1, z, block_eye_id)
-        mc.setBlocks(x-1, y+4, z, x-2, y+4, z, block_eye_id)
-        mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_eye_id)
+        mc.setBlocks(x-2, y, z, x-2, y+2, z, block_face_id)
+        mc.setBlocks(x-5, y, z, x-5, y+2, z, block_face_id)
+        mc.setBlocks(x-3, y+1, z, x-4, y+3, z, block_face_id)
+        mc.setBlocks(x-1, y+4, z, x-2, y+5, z, block_face_id)
+        mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_face_id)
+    elif face == "smile":
+        mc.setBlocks(x-2, y+1, z, x-2, y+2, z, block_face_id)
+        mc.setBlocks(x-5, y+1, z, x-5, y+2, z, block_face_id)
+        mc.setBlocks(x-3, y, z, x-4, y+1, z, block_face_id)
+        mc.setBlocks(x-1, y+4, z, x-2, y+5, z, block_face_id)
+        mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_face_id)
+    elif face == "smile_wink":
+        mc.setBlocks(x-2, y+1, z, x-2, y+2, z, block_face_id)
+        mc.setBlocks(x-5, y+1, z, x-5, y+2, z, block_face_id)
+        mc.setBlocks(x-3, y, z, x-4, y+1, z, block_face_id)
+        mc.setBlocks(x-1, y+4, z, x-2, y+4, z, block_face_id)
+        mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_face_id)
     elif face == "wink":
-       mc.setBlocks(x-2, y, z, x-2, y+2, z, block_eye_id)
-       mc.setBlocks(x-5, y, z, x-5, y+2, z, block_eye_id)
-       mc.setBlocks(x-3, y+1, z, x-4, y+3, z, block_eye_id)
-       mc.setBlocks(x-1, y+4, z, x-2, y+4, z, block_eye_id)
-       mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_eye_id)
-    elif face == "surprised":
-        mc.setBlocks(x-2, y, z, x-2, y+2, z, block_eye_id)
-        mc.setBlocks(x-5, y, z, x-5, y+2, z, block_eye_id)
-        mc.setBlocks(x-3, y, z, x-4, y+3, z, block_eye_id)
-        mc.setBlocks(x-1, y+4, z, x-2, y+5, z, block_eye_id)
-        mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_eye_id)
+       mc.setBlocks(x-2, y, z, x-2, y+2, z, block_face_id)
+       mc.setBlocks(x-5, y, z, x-5, y+2, z, block_face_id)
+       mc.setBlocks(x-3, y+1, z, x-4, y+3, z, block_face_id)
+       mc.setBlocks(x-1, y+4, z, x-2, y+4, z, block_face_id)
+       mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_face_id)
+    elif face == "wow!":
+        mc.setBlocks(x-2, y, z, x-2, y+2, z, block_face_id)
+        mc.setBlocks(x-5, y, z, x-5, y+2, z, block_face_id)
+        mc.setBlocks(x-3, y, z, x-4, y+3, z, block_face_id)
+        mc.setBlocks(x-1, y+4, z, x-2, y+5, z, block_face_id)
+        mc.setBlocks(x-6, y+4, z, x-5, y+5, z, block_face_id)
 
 
 
@@ -57,6 +57,6 @@ if __name__ == "__main__":
 
     set_creeper(mc, y=75)
     sleep(1)
-    set_creeper(mc, z=-20, block_id="pink_wool", block_eye_id="green_wool", face="surprised")
+    set_creeper(mc, z=-20, block_id="pink_wool", block_face_id="green_wool", face="wow!")
 
-    # mc.postToChat("完成！！！")
+    mc.postToChat("完成！！！")
