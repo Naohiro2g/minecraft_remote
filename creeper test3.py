@@ -53,38 +53,17 @@ if __name__ == "__main__":
 
     make_number = "2"
     
-    make_face1 = "wow!" #１～５まで自由に変更可
-    make_face2 = "normal"
-    make_face3 = "smile"
-    make_face4 = "smile_wink"
-    make_face5 = "wink"
+faces = ["wow!", "normal", "smile", "smile_wink", "wink"]
 
-for x in range(-2, 3):
-        set_creeper(mc, x=x * 10, block_id="green_wool", face = make_face1)
-        sleep(2)
-        # clear_creeper(mc, x=x * 10)
+x = -20
+for face in faces:
+	set_creeper(mc, x=x, block_id="green_wool", face=face)
+	mc.postToChat(face)
+	x += 10
 
-        if make_number == "1":
-            mc.postToChat("完成！！！")
 
-        elif make_number == "2":
-            set_creeper(mc, x=x * 10, block_id = "green_wool", face = make_face2)
-            sleep(1)
-            mc.postToChat("完成！！！")
+    
 
-        elif make_number == "3":
-            set_creeper(mc, x=x * 10, block_id = "green_wool", face = make_face3)
-            sleep(1)
-            mc.postToChat("完成！！！")
-        
-        elif make_number == "4":
-            set_creeper(mc, x=x * 10, block_id = "green_wool", face = make_face4)
-            sleep(1)
-            mc.postToChat("完成！！！")
 
-        else :
-            set_creeper(mc, x=x * 10, block_id = "green_wool", face = make_face5)
-            sleep(1)
-            mc.postToChat("完成！！！")
 
     
