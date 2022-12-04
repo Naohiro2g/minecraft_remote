@@ -53,6 +53,7 @@ if __name__ == "__main__":
 
     make_number = "2"
     
+
 faces = ["wow!", "normal", "smile", "smile_wink", "wink"]
 
 x = -20
@@ -60,6 +61,10 @@ for face in faces:
 	set_creeper(mc, x=x, block_id="green_wool", face=face)
 	mc.postToChat(face)
 	x += 10
+
+
+
+
 
 
     
