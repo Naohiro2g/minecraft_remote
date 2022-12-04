@@ -54,7 +54,7 @@ if __name__ == "__main__":
     make_number = "2"
     
 
-faces = ["wow!", "normal", "smile", "smile_wink", "wink"]
+faces = ["normal", "wink", "wow!", "smile", "smile_wink"]
 
 x = -20
 for face in faces:
