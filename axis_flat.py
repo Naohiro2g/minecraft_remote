@@ -103,7 +103,10 @@ if __name__ == "__main__":
     # mc.player.setPos(0,100,0)
     # mc.setBlocks(-80, 60, -80,   80, 120, 80,   0)
 
-    reset_minecraft_world(mc, width=10)
+    reset_minecraft_world(mc, width=100)
     # draw_XYZ_axis(mc, wait=0.2)
     # clear_XYZ_axis(mc, wait=0)
-    draw_XYZ_axis(mc, wait=0.3)
+    # draw_XYZ_axis(mc, wait=0.3)
+
+    mc.postToChat("reset OK")
+
