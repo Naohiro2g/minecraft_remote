@@ -67,7 +67,6 @@ class Vec3:
     def __eq__(self, rhs):
         if self.x == rhs.x and self.y == rhs.y and self.z == rhs.z:
             return True
-
         return False
 
     def iround(self): self._map(lambda v:int(v+0.5))
@@ -75,6 +74,15 @@ class Vec3:
 
     def rotateLeft(self):  self.x, self.z = self.z, -self.x
     def rotateRight(self): self.x, self.z = -self.z, self.x
+
+    @staticmethod
+    def y(n=1): return Vec3(0, n, 0)
+
+    @staticmethod
+    def up(n=1): return Vec3.y(n)
+
+    @staticmethod
+    def down(n=1): return Vec3.y(-n)
 
 def testVec3():
     # Note: It's not testing everything
