@@ -1,6 +1,9 @@
 # Naohiro2g/minecraft_remote
 [**(English here.)**](./README.md)
 
+## 速報: modの代わりにプラグインで最新版のマインクラフトをリモコンできるようになりました。
+詳しくは、こちら。 (https://github.com/Naohiro2g/minecraft_remote_itkids/tree/main/itkids_9)  そのリポに説明を書いた後に、minecraft_remoteを次のバージョンにアップグレードします。
+
 |[1.12 World of Color Update](https://www.youtube.com/watch?v=k2dQuIIUT-o)|[1.13 Update Aquatic](https://www.youtbe.com/watch?v=hcutClmY1pI)|[1.16 Nether update](https://www.youtube.com/watch?v=1DhWXAiNgfQ)|
 |--|--|--|
 |[<img src="./images/1.12_world_of_color_update.jpg" width="240">](./images/1.12_world_of_color_update.jpg)|[<img src="./images/1.13_update_aquatic.jpg" width="240">](./images/1.13_update_aquatic.jpg)|[<img src="./images/1.16_nether_update.png" width="240">](./images/1.16_nether_update.png)|
