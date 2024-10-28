@@ -1,4 +1,8 @@
 # Naohiro2g/minecraft_remote
+
+## BREAKING UPDATE: You can now remotely control the latest version of Minecraft with a plugin instead of mods.
+See (https://github.com/Naohiro2g/minecraft_remote_itkids/tree/main/itkids_9) for more info.  I will add a note to that repo and then upgrade this minecraft_remote to the next version.
+
 [**(==== 日本語はこちら。 ====)**](./README_ja.md)
 
 |[1.12 World of Color Update](https://www.youtube.com/watch?v=k2dQuIIUT-o)|[1.13 Update Aquatic](https://www.youtube.com/watch?v=hcutClmY1pI)|[1.16 Nether update](https://www.youtube.com/watch?v=1DhWXAiNgfQ)|
