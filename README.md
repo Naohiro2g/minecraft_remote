@@ -1,7 +1,9 @@
 # Naohiro2g/minecraft_remote
 
+## Please visit the new “Minecraft Remote Project” website (https://mc-remote.com/).
+
 ## BREAKING UPDATE: You can now remotely control the latest version of Minecraft with a plugin instead of mods.
-See (https://github.com/Naohiro2g/minecraft_remote_itkids/tree/main/itkids_9) for more info.  I will add a note to that repo and then upgrade this minecraft_remote to the next version.
+See (https://github.com/Naohiro2g/minecraft_remote_itkids/tree/main/itkids_9) for more info.  I will add a note to that repo and then upgrade this minecraft_remote to the next version. https://github.com/Naohiro2g/minecraft_remote_itkids/releases
 
 [**(==== 日本語はこちら。 ====)**](./README_ja.md)
 
